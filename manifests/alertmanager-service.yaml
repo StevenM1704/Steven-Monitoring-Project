@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: steven-alertmanager
+spec:
+  type: ClusterIP
+  selector:
+    app: steven-alertmanager
+  ports:
+    - port: 9093
+      targetPort: 9093

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: steven-monitoring-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: steven-monitoring-app
+  template:
+    metadata:
+      labels:
+        app: steven-monitoring-app
+    spec:
+      containers:
+        - name: steven-monitoring-app
+          image: steven-monitoring-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000

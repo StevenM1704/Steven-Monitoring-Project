@@ -1,0 +1,19 @@
+groups:
+  - name: steven-monitoring-alerts
+    rules:
+      - alert: UrlDown
+        expr: url_up == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "URL is down"
+          description: "The monitored URL is not responding with status 200."
+      - alert: HighUrlLatency
+        expr: url_latency_seconds > 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High URL latency"
+          description: "The monitored URL latency is higher than 1 second."

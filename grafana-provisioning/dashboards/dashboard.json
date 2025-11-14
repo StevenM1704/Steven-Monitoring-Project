@@ -1,0 +1,39 @@
+{
+  "uid": "steven-monitoring",
+  "title": "Steven Monitoring Dashboard",
+  "timezone": "browser",
+  "schemaVersion": 36,
+  "version": 1,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "URL Up Status",
+      "targets": [
+        {
+          "expr": "url_up"
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 6
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "URL Latency Seconds",
+      "targets": [
+        {
+          "expr": "url_latency_seconds"
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 6,
+        "w": 12,
+        "h": 6
+      }
+    }
+  ]
+}

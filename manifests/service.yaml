@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: steven-monitoring-service
+spec:
+  selector:
+    app: steven-monitoring-app
+  ports:
+    - port: 5000
+      targetPort: 5000
